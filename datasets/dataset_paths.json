@@ -1,0 +1,10 @@
+{
+    "ris17_eval_monocular":"./data/RIS_2017/clean_monocular/test_set/",
+    "scared_test":"./data/SCARED/original/testing",
+
+    "scared":"./data/SCARED/keyframe_only/training/",
+    "flyingthings3d":"./data/FlyingThings3D_subset/",
+    "ris17":"./data/RIS_2017/stereo_rectified/train_set",
+    "ris17_124":"./data/RIS_2017/stereo_rectified/train_set",
+    "ris17_train_monocular":"./data/RIS_2017/clean_monocular/train_set/"
+}

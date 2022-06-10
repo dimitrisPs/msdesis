@@ -1,0 +1,38 @@
+{
+    "experiment_tag": "light-ph3-disp2seg",
+    "project" : "msdesis",
+
+    "device": "cuda",
+    "use_amp": true,
+    "overfit": false,
+    "log_gradients":false,
+    "seed": 5,
+    "load_model": "./weights/phase_2/disparity/light.pt",
+    "dataset": "ris17_train_monocular",
+    "model_type":"light",
+    "n_classes":1,
+    "max_disparity":320,
+
+    "dl_workers": 4,
+    "pretrained_encoder":false,
+
+    "training_bs": 16,
+    "tr_crop_w": -1,
+    "tr_crop_h": -1,
+
+    "resize_factor":1,
+
+    "eval_bs": 16,
+    "eval_crop_w": -1,
+    "eval_crop_h": -1,
+
+    "lr": 0.0001,
+    "weight_decay":0.0001,
+    "segmentation_alpha":0.5,
+    "segmentation_criterion":"dice_wbce",
+
+    "epochs": 40,
+    "wandb_log": 1,
+    "model_save_period": 10
+
+}

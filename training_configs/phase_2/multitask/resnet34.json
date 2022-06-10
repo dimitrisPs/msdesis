@@ -1,0 +1,50 @@
+{
+    "experiment_tag": "resnet34-ph2-multitask",
+    "device": "cuda",
+    "project": "msdesis",
+    "use_amp": true,
+    "overfit": false,
+    "log_gradients": false,
+    "seed": 5,
+    "load_model": "./weights/phase_1/disparity/resnet34.pt",
+    "dataset": "ris17_124",
+    "model_type": "resnet34",
+    "dl_workers": 4,
+    "max_disparity": 320,
+    "n_classes": 1,
+
+
+
+
+    "input_scale_factor": 1,
+
+    "training_bs": 10,
+    "tr_crop_w": 640,
+    "tr_crop_h": 512,
+
+    "eval_bs": 4,
+    "eval_crop_w": -1,
+    "eval_crop_h": -1,
+
+    "lr": 0.0001,
+    "weight_decay":0.0001,
+
+    "disparity_segmentation_weight":0.2,
+    "disparity_criterion":"unsupervised_multiscale",
+    "compute_error": false,
+    "ssim_window":11,
+    "ssim_alpha":0.9,
+    "photometric_smoothness_alpha":0.7,
+    "ignore_occlusions": false,
+    
+    "supervision_scales": 1,
+    "disparity_loss_scale_weights": [1,0,0,0,0,0],
+
+    "segmentation_criterion":"dice_wbce",
+    "segmentation_alpha":0.5,
+
+
+    "epochs": 70,
+    "wandb_log":1,
+    "model_save_period": 10
+}

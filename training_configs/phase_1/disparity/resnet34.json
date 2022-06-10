@@ -1,0 +1,35 @@
+{
+    "experiment_tag": "resnet34-ph1-disp",
+    "project": "msdesis",
+    "device": "cuda",
+    "log_gradients":false,
+    "use_amp": true,
+    "overfit": false,
+    "seed": 5,
+    "load_model": null,
+    "dataset": "flyingthings3d",
+    "model": "resnet34",
+    "disparity_loss": "multiscale_smooth_l1",
+    "compute_error": true, 
+    "dl_workers": 4,
+    "max_disparity": 320,
+
+    "training_bs": 15,
+    "tr_crop_w": 640,
+    "tr_crop_h": 384,
+
+    "eval_bs": 5,
+    "eval_crop_w": 960,
+    "eval_crop_h": 512,
+
+    "use_onecycle_lr": true,
+    "lr": 0.0001,
+    "weight_decay":0.0001,
+
+    "supervision_scales": 6,
+    "scale_weights": [1,1,1,1,1,1],
+
+    "epochs": 150,
+    "wandb_log":1,
+    "model_save_period": 10
+}

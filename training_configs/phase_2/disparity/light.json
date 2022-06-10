@@ -1,0 +1,35 @@
+{
+    "experiment_tag": "light-ph2-disp",
+    "project": "msdesis",
+    "device": "cuda",
+    "log_gradients":false,
+    "use_amp": true,
+    "overfit": false,
+    "seed": 5,
+    "load_model": "./weights/phase_1/disparity/light.pt",
+    "dataset": "scared",
+    "model": "light",
+    "disparity_loss": "multiscale_smooth_l1",
+    "compute_error": true, 
+    "dl_workers": 4,
+    "max_disparity": 320,
+
+    "training_bs": 7,
+    "tr_crop_w": 640,
+    "tr_crop_h": 384,
+
+    "eval_bs": 1,
+    "eval_crop_w": -1,
+    "eval_crop_h": -1,
+    
+    "use_onecycle_lr": false,
+    "lr": 0.0001,
+    "weight_decay":0.0001,
+
+    "supervision_scales": 6,
+    "scale_weights": [1,1,1,1,1,1],
+
+    "epochs": 600,
+    "wandb_log":50,
+    "model_save_period": 100
+}
