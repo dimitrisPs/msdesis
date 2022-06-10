@@ -9,7 +9,7 @@ Reconstructing the 3D geometry of the surgical site and detecting instruments wi
 ### Architecture
 
 ![m3dris-architecture](media/architecture.png)
-The architecture of our multitask framework with both heads attached. Left and right rectified images are processed by the shared  feature  encoder  which  outputs  feature  maps Fi at  different  scales Si.  Those  features  are  inputs  to  each  task  specific sub-network (head) which make the final predictions. The modular design allows us to interchange or remove part of the network.
+The architecture of our multi-task framework with both heads attached. Left and right rectified images are processed by the shared  feature  encoder  which  outputs  feature  maps Fi at  different  scales Si.  Those  features  are  inputs  to  each  task  specific sub-network (head) which make the final predictions. The modular design allows us to interchange or remove part of the network.
 
 ### Reconstructed output
 
@@ -17,8 +17,8 @@ The architecture of our multitask framework with both heads attached. Left and r
 |:----------------------------:|:----------------------------:|
 |![3d-reconstruction-scared-ds8kf4](media/ds8kf4_light_ph3_seg.gif)|![3d-reconstruction-ris-ds4f264](media/ds4f264_light_ph3_seg.gif)
 
-3D reconstruction of SCARED and RIS2017 samples based on output of our method. Disparity estimation as reconstructed in 3D and binary tool segmentation masks are used to color tool points in shades of cyan.
-a virtual camera follows a circular orbit around the endoscope to show details of the final outcome. The model used to estimate both the segmentation and disparity is the light-phase3-segmentation.
+3D reconstruction of SCARED and RIS2017 samples based on the output of our method. Disparity predictions are reconstructed in 3D and binary tool segmentation masks are used to color tool points in shades of cyan.
+A virtual camera follows a circular trajectory around the endoscope to show details of the final outcome. The model used to estimate both the segmentation and disparity is the light-phase3-multi2seg.
 
 ### Additional resources
 
