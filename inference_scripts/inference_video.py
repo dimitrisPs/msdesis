@@ -46,10 +46,10 @@ if __name__ == '__main__':
     stereo_frame_size = (int(invideo.get(cv2.CAP_PROP_FRAME_HEIGHT)), int(invideo.get(cv2.CAP_PROP_FRAME_WIDTH)))
     if args.save_images:
         if args.mode !='segmentation':
-            disp_path = Path(args.out_dir)/'disparity'
+            disp_path = Path(args.out_path)/'disparity'
             disp_path.mkdir(exist_ok=True, parents=True)
         if args.mode !='disparity':
-            seg_path =  Path(args.out_dir)/'segmentation'
+            seg_path =  Path(args.out_path)/'segmentation'
             seg_path.mkdir(exist_ok=True, parents=True)
     else:
         if args.stacking =='horizontal':
