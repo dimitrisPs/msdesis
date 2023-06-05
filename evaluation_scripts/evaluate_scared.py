@@ -126,7 +126,6 @@ if __name__ == '__main__':
                     e= np.abs(ref_depth-predicted_depth)
                     e[predicted_depth<=0]=40
                     depth_error_accumulator.append(np.mean(e))
-                break
 
 
             scores['dataset'].append('dataset_'+str(dataset_id)+'_keyframe_'+str(keyframe_id))
